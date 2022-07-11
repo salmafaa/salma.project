@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form_VueJs.css">
+    <title>Form VueJs</title>
+</head>
+<body bgcolor="darkcyan">
+    <div id="app">
+        <h1>Data Perpustakaan</h1>
+        <hr>
+        <div class="data1">
+            <h3>Isikan dengan benar!</h3>
+            <input type="text" v-model="nama" placeholder="ketik nama disini">
+                <p> Nama Anda adalah :  {{nama}} </p>
+            <input type="text" v-model="alamat" placeholder="masukan alamat">
+                <p> Alamat Anda :  {{alamat}} </p>
+            <input type="text" v-model="nomor" placeholder="masukan no anggota">
+                <p> No. Anggota Anda :  {{nomor}} </p>
+            <textarea cols="25" rows="5" v-model="ket" placeholder="masukan keterangan"></textarea>
+                <p style="white-space: pre-line;"> Keterangan :  {{ket}} </p>
+        </div>
+        <div class="data2">
+            <h3>Jenis Kelamin : </h3>
+                <input type="radio" id="P" v-model="pilih" value="Perempuan">
+                Perempuan
+            <br>
+                <input type="radio" id="L" v-model="pilih" value="Laki-Laki">
+                Laki-laki
+            <br>
+                <p>Terpilih : {{pilih}}</p>
+
+            <h3>Pilih Genre Favorit Anda : </h3>
+                <input type="checkbox" v-model="ceklis" value="Fantasy">
+                <label for="checkbox">Fantasy</label>
+                <input type="checkbox" v-model="ceklis" value="History">
+                <label for="checkbox">History</label> <br>
+                <input type="checkbox" v-model="ceklis" value="Slice of Life">
+                <label for="checkbox">Slice of Life</label>
+                <input type="checkbox" v-model="ceklis" value="Science Fiction">
+                <label for="checkbox">Science Fiction</label>
+                <p>Terpilih : </p>
+                <ul>
+                    <li v-for="c in ceklis">{{c}}</li>
+                </ul>
+
+            <h3>Pilih Rekomendasi Buku : </h3>
+            <select v-model="select">
+                <option disabled value="">Pilih Judul</option>
+                <option>Double or Die</option>
+                <option>Just After Sunset</option>
+                <option>Under The Dome</option>
+                <option>Artemis Fowl</option>
+                <option>The Ring of Solomon</option>
+                <option>The Walking Dead</option>
+            </select>
+            <p>Terpilih : {{select}} </p>
+        </div>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>

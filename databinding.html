@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolaborasi Binding</title>
+    <style>
+        .warna {
+            color: blue
+        }
+    </style>
+</head>
+<center>
+<body>
+    <div id="nomor3">
+        <b :class='rubah'>LOGO UKM TEGAZS</b> <br> <br>
+        <img v-bind:src="imageSrc" :style="{width: lebar + 'px',
+            height: panjang + 'px'}" :title="keterangan">
+
+        <script src="vue.min.js"></script>
+        <script src="databinding.js"></script>
+    </div>
+    
+</body>
+</center>
+</html>

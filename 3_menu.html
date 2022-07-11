@@ -1,0 +1,31 @@
+<html>
+
+<Head>
+    <Title>Frame Menu</Title>
+</head>
+
+<body bgcolor="darkcyan">
+    <script language="JavaScript"> function menu() {
+
+            str = "form_VueJs.html";
+            if (document.fform.rbmenu[1].checked) str = "databinding.html";
+            else if (document.fform.rbmenu[2].checked) str = "arrayVueJs.html";
+            else if (document.fform.rbmenu[3].checked) str = "event_handler.html";
+            else if (document.fform.rbmenu[4].checked) str = "catatan.html";
+            else if (document.fform.rbmenu[5].checked) str = "no3.html";
+
+            parent.fr1.location.href = str;
+        }
+    </script>
+    <form name="fform">
+        <p><b><input type="radio" checked name="rbmenu" value="1">Form</p></b>
+        <p><b><input type="radio" name="rbmenu" value="2">Data Binding</p></b>
+        <p><b><input type="radio" name="rbmenu" value="3">Array</p></b>
+        <p><b><input type="radio" name="rbmenu" value="4">Event Handler</p></b>
+        <p><b><input type="radio" name="rbmenu" value="5">Catatan</b></p>
+        <p><b><input type="radio" name="rbmenu" value="6">DOM & Event Listener</b></p>
+        <p><b><input type="button" onclick="menu()" value="tampilkan"></b>
+    </form>
+</body>
+
+</html>

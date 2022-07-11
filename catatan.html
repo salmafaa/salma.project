@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATATAN HARIAN</title>
+    <link rel="stylesheet" href="catatanharian.css">
+</head>
+<body>
+    <div id="no1"> 
+        <h1>Catatan Harian</h1>
+        <div id="ctt">
+            <input class="form" type="text" v-model="isi" placeholder="Ketik catatan, lalu tekan enter"
+            @keyup.enter="tambah"> <br>
+        <input class="form" type="text" v-model="cari" placeholder="Search">
+        <h5>Daftar Catatan Harian :</h5> 
+        <table>
+            <tr v-for='(ct, index) in caricatatan'>
+                <td>
+                    <input class="form1" type="text" :disabled='ct.dis' :value="ct.catatan" v-model="ct.catatan"/> 
+                </td>
+                <td>
+                    <button @click='edit(index, ct.dis)'> Edit </button>
+                </td>
+                <td>
+                    <button @click='hapus(index)'> Hapus </button>
+                </td>
+            </tr>
+        </table>
+            <button class="hs" @click="hapussemua">Hapus Semua Catatan</button><br>
+        </div>
+    </div>
+
+    <script src="vue.min.js"></script>
+    <script src="catatan.js"></script>
+</body>
+</html>

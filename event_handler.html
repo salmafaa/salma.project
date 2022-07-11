@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="event_handler.css">
+    <title>Event Handler</title>
+</head>
+<body bgcolor="darkcyan">
+    <div id="app">
+        <h1>Survey Buku Perpustakaan</h1> <hr>
+        <h3>Pilih Rekomendasi Buku : </h3>
+        <select v-model="select">
+            <option disabled value="">Pilih Judul</option>
+            <option>Double or Die</option>
+            <option>Just After Sunset</option>
+            <option>Under The Dome</option>
+            <option>Artemis Fowl</option>
+            <option>The Ring of Solomon</option>
+            <option>The Walking Dead</option>
+        </select>
+        <p>Terpilih : {{select}} </p>
+        <button
+            @click="pesan"> Saya merekomendasikan buku ini
+        </button>
+
+        <h3>Rekomendasikan Buku Lain : </h3>
+        <input type="text" @keyup.enter='pesan2' placeholder="ketik judul">
+        <p>Judul lain :</p>
+        <input type="text" @keyup.space='pesann2' placeholder="ketik judul">
+
+
+        <h3>Rekomendasikan Penulis : </h3>
+        <button v-on:click.left='pesan3'>Tere Liye</button>
+        <button v-on:click.left='pesan4'>Stephen King</button>
+        <button v-on:click.left='pesan5'>Kazuo Murakami</button>
+
+        <h3>Selesai</h3>
+        <button
+        @click.left=" selesai= 'Survey telah terkirim' ">
+        Kirim
+        </button>
+        <br> {{selesai}}
+
+        <script src="vue.min.js"></script>
+        <script src="event_handler.js"></script>
+    </div>
+</body>
+</html>

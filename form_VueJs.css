@@ -1,0 +1,19 @@
+#app {
+    width: 700px;
+    height: 600px;
+    background-color: white;
+    border: solid black;
+    margin: auto;
+}
+#app h1 {
+    padding-top: 10px;
+    text-align: center;
+}
+.data1 {
+    margin-left: 50px;
+    float: left;
+}
+.data2 {
+    margin-right: 50px;
+    float: right;
+}

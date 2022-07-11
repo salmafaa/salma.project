@@ -1,0 +1,38 @@
+body {
+    background-color: darkcyan;
+}
+#no1 {
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    margin-top: 40px;
+    border: solid black;
+    border-radius: 50px;
+}
+#no1 h1 {
+    text-align: center;
+}
+#ctt {
+    padding-left: 50px;
+}
+.form {
+    width: 700px;
+    height: 30px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+.form1 {
+    width: 600px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+.hs {
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+}

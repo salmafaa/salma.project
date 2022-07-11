@@ -1,0 +1,11 @@
+#app {
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    border: solid black;
+    margin: auto;
+    padding : 20px;
+}
+#app h1 {
+    text-align: center;
+}

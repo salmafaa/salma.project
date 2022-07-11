@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arrayVueJs.css">
+    <title>Array VueJs</title>
+</head>
+<body style="background-color:darkcyan;">
+    <div id="tugas">
+        <h1>Data Novel</h1>
+        <div id="no1">
+            <h3>Novel Karya Tereliye</h3>
+            <input type="text" v-model="isi">
+            <button @click="tambah"> Tambah Judul </button>
+            <ul>
+                <li v-for="(bk, index) in buku">
+                    <button @click="hapus(index)">X</button>
+                {{ bk }}
+                </li>
+            </ul>
+
+            <h3>Novel Terjemahan</h3>
+            <p><b> Seluruh Novel :</b></p>
+            <ul>
+                <li v-for="bl in bukulain" v-text="bl.judul">
+                </li>
+            </ul>
+            <p><b> Novel yang masih tersedia :</b></p>
+                <ul>
+                    <li v-for="ba in bukuAda" v-text="ba.judul"></li>
+                </ul>
+            <p><b> Novel yang tidak tersedia :</b></p>
+                <ul>
+                    <li v-for="bh in bukuHabis" v-text="bh.judul"></li>
+                </ul>
+        </div>
+        <div id="no2">
+            <h3>Program Pencarian Buku</h3>
+            <input type="text" v-model="cari" placeholder="cari berdasarkan penulis">
+            <ul v-for="bl in filterbukulain">
+                <li>
+                    Judul : {{bl.judul}}
+                    <br>
+                    Penulis : {{bl.penulis}}
+                </li>
+            </ul>
+        </div>
+
+        <script src="vue.min.js"></script>
+        <script src="arrayVueJs.js"></script>
+    </div>
+</body>
+</html>
